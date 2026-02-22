@@ -33,10 +33,24 @@ public class Main {
 
         String word = "OOPS";
 
-        for (char c : word.toCharArray()) {
-            if (letterMap.containsKey(c)) {
-                letterMap.get(c).print();
-            }
+String[] bannerLines = new String[5];
+
+for (int i = 0; i < 5; i++) {
+
+    StringBuilder rowBuilder = new StringBuilder();
+
+    for (char c : word.toCharArray()) {
+        if (letterMap.containsKey(c)) {
+            rowBuilder.append(letterMap.get(c).getRow(i)).append(" ");
         }
+    }
+
+    bannerLines[i] = rowBuilder.toString();
+}
+
+// Print using enhanced for-loop
+for (String line : bannerLines) {
+    System.out.println(line);
+}
     }
 }
