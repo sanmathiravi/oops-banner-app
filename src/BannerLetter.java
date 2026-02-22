@@ -5,6 +5,9 @@ public class BannerLetter {
     public BannerLetter(String[] pattern) {
         this.pattern = pattern;
     }
+public String getRow(int index){
+return pattern[index];
+}
 
     public void print() {
         for (String line : pattern) {
