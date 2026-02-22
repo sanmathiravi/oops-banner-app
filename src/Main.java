@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,10 +35,17 @@ public class Main {
 
         String word = "OOPS";
 
-        for (char c : word.toCharArray()) {
-            if (letterMap.containsKey(c)) {
-                letterMap.get(c).print();
-            }
+        for (int i = 0; i < 5; i++) {
+
+    List<String> rowParts = new ArrayList<>();
+
+    for (char c : word.toCharArray()) {
+        if (letterMap.containsKey(c)) {
+            rowParts.add(letterMap.get(c).getRow(i));
         }
     }
+
+    System.out.println(String.join("   ", rowParts));
+}
+}
 }
