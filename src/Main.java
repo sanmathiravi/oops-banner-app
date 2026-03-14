@@ -5,46 +5,17 @@ import java.util.Map;
 
 public class Main {
 
-    public static String[] getO() {
-        return new String[]{
-                " ***** ",
-                "*     *",
-                "*     *",
-                "*     *",
-                " ***** "
-        };
-    }
-
-    public static String[] getP() {
-        return new String[]{
-                " ***** ",
-                "*     *",
-                " ***** ",
-                "*      ",
-                "*      "
-        };
-    }
-
-    public static String[] getS() {
-        return new String[]{
-                " ***** ",
-                "*      ",
-                " ***** ",
-                "      *",
-                " ***** "
-        };
-    }
-
     public static void main(String[] args) {
 
-        BannerLetter o = new BannerLetter(getO());
-        BannerLetter p = new BannerLetter(getP());
-        BannerLetter s = new BannerLetter(getS());
+        String word = "OOPS";
 
-        o.print();
-        o.print();
-        p.print();
-        s.print();
+        for (int i = 0; i < 5; i++) {
+            for (char c : word.toCharArray()) {
+                System.out.print(CharacterPattern.getRow(c, i) + " ");
+            }
+            System.out.println();
+        }
+
     }
 
     System.out.println(String.join("   ", rowParts));
