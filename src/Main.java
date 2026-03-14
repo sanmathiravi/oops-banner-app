@@ -16,4 +16,8 @@ public class Main {
         renderBanner(word);
 
     }
+
+    System.out.println(String.join("   ", rowParts));
+}
+}
 }
