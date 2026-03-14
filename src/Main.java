@@ -4,44 +4,47 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-    public static void main(String[] args) {
 
-        Map<Character, BannerLetter> letterMap = new HashMap<>();
-
-        letterMap.put('O', new BannerLetter(new String[]{
+    public static String[] getO() {
+        return new String[]{
                 " ***** ",
                 "*     *",
                 "*     *",
                 "*     *",
                 " ***** "
-        }));
+        };
+    }
 
-        letterMap.put('P', new BannerLetter(new String[]{
+    public static String[] getP() {
+        return new String[]{
                 " ***** ",
                 "*     *",
                 " ***** ",
                 "*      ",
                 "*      "
-        }));
+        };
+    }
 
-        letterMap.put('S', new BannerLetter(new String[]{
+    public static String[] getS() {
+        return new String[]{
                 " ***** ",
                 "*      ",
                 " ***** ",
                 "      *",
                 " ***** "
-        }));
+        };
+    }
 
-        String word = "OOPS";
+    public static void main(String[] args) {
 
-        for (int i = 0; i < 5; i++) {
+        BannerLetter o = new BannerLetter(getO());
+        BannerLetter p = new BannerLetter(getP());
+        BannerLetter s = new BannerLetter(getS());
 
-    List<String> rowParts = new ArrayList<>();
-
-    for (char c : word.toCharArray()) {
-        if (letterMap.containsKey(c)) {
-            rowParts.add(letterMap.get(c).getRow(i));
-        }
+        o.print();
+        o.print();
+        p.print();
+        s.print();
     }
 
     System.out.println(String.join("   ", rowParts));
