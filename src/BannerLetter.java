@@ -7,12 +7,10 @@ public class BannerLetter {
     }
 
     public String getRow(int index) {
-return pattern[index];
-}
+        return pattern[index];
+    }
 
-
-
-public void print() {
+    public void print() {
         for (String line : pattern) {
             System.out.println(line);
         }
