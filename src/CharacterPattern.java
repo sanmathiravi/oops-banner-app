@@ -33,10 +33,7 @@ public class CharacterPattern {
 
     }
 
-    public static String getRow(char c, int row) {
-        if (patternMap.containsKey(c)) {
-            return patternMap.get(c)[row];
-        }
-        return "       ";
+    public static String getPatternRow(char letter, int row) {
+        return patternMap.get(letter)[row];
     }
 }
