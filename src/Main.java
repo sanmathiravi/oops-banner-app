@@ -1,17 +1,44 @@
 public class Main {
 
+    public static String[] getO() {
+        return new String[]{
+                " ***** ",
+                "*     *",
+                "*     *",
+                "*     *",
+                " ***** "
+        };
+    }
+
+    public static String[] getP() {
+        return new String[]{
+                " ***** ",
+                "*     *",
+                " ***** ",
+                "*      ",
+                "*      "
+        };
+    }
+
+    public static String[] getS() {
+        return new String[]{
+                " ***** ",
+                "*      ",
+                " ***** ",
+                "      *",
+                " ***** "
+        };
+    }
+
     public static void main(String[] args) {
 
-        String[] pattern = {
-                String.join("", "*","*","*","*","*"),
-                String.join("", "*"," "," "," ","*"),
-                String.join("", "*","*","*","*","*"),
-                String.join("", "*"," "," "," ","*"),
-                String.join("", "*"," "," "," ","*")
-        };
+        BannerLetter o = new BannerLetter(getO());
+        BannerLetter p = new BannerLetter(getP());
+        BannerLetter s = new BannerLetter(getS());
 
-        BannerLetter letter = new BannerLetter(pattern);
-        letter.print();
-    
+        o.print();
+        o.print();
+        p.print();
+        s.print();
     }
 }
